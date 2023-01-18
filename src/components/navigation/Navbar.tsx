@@ -7,7 +7,7 @@ import {
   linksVariants,
   logoVariants,
   navbarVariants,
-} from "../../animation/navbar-motion";
+} from "../../animation/navigation-motion";
 import Backdrop from "../backdrop/Backdrop";
 import useWindowSize, { Size } from "../../hooks/useWindowSize";
 import { useEffect } from "react";
@@ -71,14 +71,18 @@ const Navbar = () => {
         <AnimatePresence mode="wait">
           {open && (
             <motion.ul
-              className="md:hidden absolute top-0 right-0 h-screen w-full max-w-[320px]
+              className="md:hidden absolute top-0 right-0 h-screen w-full max-w-[70%] sm:max-w-[320px]
               flex justify-center px-10 bg-slate-800"
               variants={navbarVariants}
               initial="closed"
               animate="opened"
               exit="exit"
             >
-              <div className="flex flex-col justify-between py-36 h-full">
+              <div
+                className={`flex flex-col justify-center h-full ${
+                  windowSize.height > 650 ? "space-y-24" : "space-y-12"
+                }`}
+              >
                 {navLink.map((nav, index) => (
                   <NavLink
                     key={nav.path}

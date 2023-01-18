@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import BulletNav from "./components/navigation/BulletNav";
 import Navbar from "./components/navigation/Navbar";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -10,6 +11,7 @@ function App() {
   return (
     <div className="bg-black h-screen w-screen overflow-hidden">
       <Navbar />
+      <BulletNav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

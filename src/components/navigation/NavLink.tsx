@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { linkVariants } from "../../animation/navbar-motion";
+import { linkVariants } from "../../animation/navigation-motion";
 
 interface Props {
   nav: { path: string; item: string };
