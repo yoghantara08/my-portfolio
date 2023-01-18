@@ -15,9 +15,32 @@ export const navbarVariants = {
   },
 };
 
-export const menuVariants = {};
+export const logoVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 1 } },
+};
 
-export const linkVariants = {};
+export const linksVariants = {
+  initial: { opacity: 0 },
+  animate: {
+    opacity: 1,
+    transition: {
+      delayChildren: 1,
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+export const linkVariants = {
+  initial: { y: -100 },
+  animate: {
+    y: 0,
+    transition: {
+      type: "spring",
+      duration: 0.4,
+    },
+  },
+};
 
 export const backdropVariants = {
   closed: {

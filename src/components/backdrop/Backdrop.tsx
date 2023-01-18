@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { backdropVariants } from "../../animation/variants";
+import { backdropVariants } from "../../animation/navbar-motion";
 const Backdrop = () => {
   return (
     <motion.div
       className="absolute top-0 left-0 h-full w-full backdrop-blur-sm 
-        backdrop-brightness-200"
+        backdrop-brightness-150"
       variants={backdropVariants}
       initial="closed"
       animate="opened"
