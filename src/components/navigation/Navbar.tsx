@@ -39,7 +39,7 @@ const Navbar = () => {
           </div>
         )}
       </AnimatePresence>
-      <nav className="fixed top-0 left-0 right-0 flex justify-between px-10 lg:px-20 py-6 font-roboto duration-500">
+      <nav className="fixed top-0 left-0 right-0 flex justify-between px-10 lg:px-20 py-6 font-roboto duration-500 z-20">
         <Link to="/">
           <motion.img
             src={logo}

@@ -19,7 +19,7 @@ const BulletNav = () => {
   const location = useLocation();
 
   return (
-    <nav className="hidden absolute top-0 bottom-0 right-[60px] md:flex justify-center flex-col mb-20">
+    <nav className="hidden absolute top-0 bottom-0 h-screen right-[60px] md:flex justify-center flex-col mb-20">
       <motion.ul
         className="space-y-20"
         variants={bulletNavVariants}

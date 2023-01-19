@@ -1,4 +1,6 @@
 import { Route, Routes } from "react-router-dom";
+import Footer from "./components/footer/Footer";
+import MainLayout from "./components/layout/MainLayout";
 import BulletNav from "./components/navigation/BulletNav";
 import Navbar from "./components/navigation/Navbar";
 import SocialLeft from "./components/social/SocialLeft";
@@ -10,7 +12,7 @@ import Skills from "./pages/Skills";
 
 function App() {
   return (
-    <div className="bg-black h-screen w-screen overflow-hidden">
+    <MainLayout>
       <Navbar />
       <BulletNav />
       <SocialLeft />
@@ -21,7 +23,8 @@ function App() {
         <Route path="/project" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    </div>
+      <Footer />
+    </MainLayout>
   );
 }
 
