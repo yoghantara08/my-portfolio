@@ -16,8 +16,8 @@ export const navbarVariants = {
 };
 
 export const logoVariants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { duration: 1 } },
+  initial: { opacity: 0, scale: 0 },
+  animate: { opacity: 1, scale: 1, transition: { duration: 1 } },
 };
 
 export const linksVariants = {
@@ -54,4 +54,25 @@ export const backdropVariants = {
     opacity: 0,
     transition: { ease: "easeOut", duration: 0.7 },
   },
+};
+
+export const bulletNavVariants = {
+  initial: { opacity: 0 },
+  animate: {
+    opacity: 1,
+    transition: {
+      delayChildren: 2,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+export const bulletVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 0.3 } },
+};
+
+export const diamondVariants = {
+  hover: { scale: 1.2 },
+  tap: { translateY: -6 },
 };
