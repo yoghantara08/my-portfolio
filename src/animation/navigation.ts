@@ -62,7 +62,7 @@ export const bulletNavVariants = {
     opacity: 1,
     transition: {
       delayChildren: 2,
-      staggerChildren: 0.1,
+      staggerChildren: 0.2,
     },
   },
 };

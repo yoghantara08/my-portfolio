@@ -5,7 +5,7 @@ import {
   bulletNavVariants,
   bulletVariants,
   diamondVariants,
-} from "../../animation/navigation-motion";
+} from "../../animation/navigation";
 
 const navLink: { id: number; path: string; item: string }[] = [
   { id: 1, path: "/", item: "Home" },

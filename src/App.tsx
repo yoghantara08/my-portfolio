@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import BulletNav from "./components/navigation/BulletNav";
 import Navbar from "./components/navigation/Navbar";
+import SocialLeft from "./components/social/SocialLeft";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
@@ -12,6 +13,7 @@ function App() {
     <div className="bg-black h-screen w-screen overflow-hidden">
       <Navbar />
       <BulletNav />
+      <SocialLeft />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

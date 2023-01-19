@@ -7,7 +7,7 @@ import {
   linksVariants,
   logoVariants,
   navbarVariants,
-} from "../../animation/navigation-motion";
+} from "../../animation/navigation";
 import Backdrop from "../backdrop/Backdrop";
 import useWindowSize, { Size } from "../../hooks/useWindowSize";
 import { useEffect } from "react";
