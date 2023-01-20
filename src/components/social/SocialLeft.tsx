@@ -43,7 +43,7 @@ const SocialLeft = () => {
         animate="animate"
       >
         {socials.map((social) => (
-          <motion.li variants={childrenVariants}>
+          <motion.li key={social.name} variants={childrenVariants}>
             <motion.a
               href={social.link}
               target="_blank"

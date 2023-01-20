@@ -14,6 +14,10 @@ module.exports = {
       },
       fontFamily: {
         roboto: ["Roboto Mono", "monospace"],
+        inter: ["Inter", "sans-serif"],
+      },
+      boxShadow: {
+        shadowEven: "0px 0px 6px  rgba(250,250,250,0.3)",
       },
     },
   },

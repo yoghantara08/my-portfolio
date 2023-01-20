@@ -34,7 +34,7 @@ const SocialFooter = () => {
   return (
     <ul className="md:hidden flex space-x-5 mb-3">
       {socials.map((social) => (
-        <li className="hover:-translate-y-[1px]">
+        <li key={social.name} className="hover:-translate-y-[1px]">
           <a
             href={social.link}
             target="_blank"

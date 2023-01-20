@@ -3,8 +3,7 @@ import { backdropVariants } from "../../animation/navigation";
 const Backdrop = () => {
   return (
     <motion.div
-      className="absolute top-0 left-0 h-full w-full backdrop-blur-sm z-20
-        backdrop-brightness-150"
+      className="absolute top-0 left-0 h-full w-full backdrop-blur-sm z-20"
       variants={backdropVariants}
       initial="closed"
       animate="opened"
