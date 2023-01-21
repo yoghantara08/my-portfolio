@@ -1,3 +1,5 @@
+import { AnimationProps, MotionProps } from "framer-motion";
+
 // Navbar
 export const navbarVariants = {
   closed: {
@@ -75,4 +77,11 @@ export const bulletVariants = {
 export const diamondVariants = {
   hover: { scale: 1.2 },
   tap: { translateY: -6 },
+};
+
+export const footerVariants: MotionProps = {
+  variants: {
+    initial: { opacity: 0 },
+    animate: { opacity: 1, transition: { delay: 4.5 } },
+  },
 };

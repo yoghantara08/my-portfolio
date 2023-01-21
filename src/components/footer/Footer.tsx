@@ -1,8 +1,15 @@
+import { motion } from "framer-motion";
+import { footerVariants } from "../../animation/navigation";
 import SocialFooter from "../social/SocialFooter";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col mt-12 md:mt-20 justify-center items-center w-screen  font-roboto transition duration-300">
+    <motion.footer
+      className=" flex flex-col mt-12 md:mt-20 justify-center items-center w-screen  font-roboto z-20"
+      variants={footerVariants.variants}
+      initial="initial"
+      animate="animate"
+    >
       <SocialFooter />
       <a
         href="https://github.com/yoghantara08/my-portfolio"
@@ -16,7 +23,7 @@ const Footer = () => {
         </span>{" "}
         | 2023
       </a>
-    </footer>
+    </motion.footer>
   );
 };
 

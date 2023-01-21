@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,4 +9,24 @@
 * {
   scroll-behavior: smooth;
   scrollbar-width: thin;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+.bg-gradient {
+  background: rgb(24, 30, 45);
+  background: linear-gradient(
+    310deg,
+    rgba(24, 30, 45, 1) 0%,
+    rgba(25, 26, 32, 1) 50%,
+    rgba(27, 34, 47, 1) 100%
+  );
 }
