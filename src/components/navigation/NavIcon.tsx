@@ -3,19 +3,15 @@ import { Link, useLocation } from "react-router-dom";
 import { bulletVariants, diamondVariants } from "../../animation/nav-motion";
 import { FaHome, FaUserSecret, FaPencilRuler, FaCode } from "react-icons/fa";
 import { HiChatBubbleOvalLeftEllipsis } from "react-icons/hi2";
+import { Nav } from "../../content";
 
-interface Props {
-  path: string;
-  icon: "home" | "about" | "skills" | "project" | "contact";
-}
-
-const NavIcon: React.FC<Props> = ({ path, icon }) => {
+const NavIcon: React.FC<Nav> = ({ path, item }) => {
   const location = useLocation();
 
   let navIcon;
 
-  switch (icon) {
-    case "home":
+  switch (item) {
+    case "Home":
       navIcon = (
         <FaHome
           title="Home"
@@ -23,7 +19,7 @@ const NavIcon: React.FC<Props> = ({ path, icon }) => {
         />
       );
       break;
-    case "about":
+    case "About":
       navIcon = (
         <FaUserSecret
           title="About Me"
@@ -31,7 +27,7 @@ const NavIcon: React.FC<Props> = ({ path, icon }) => {
         />
       );
       break;
-    case "skills":
+    case "Skills":
       navIcon = (
         <FaPencilRuler
           title="Skills"
@@ -39,7 +35,7 @@ const NavIcon: React.FC<Props> = ({ path, icon }) => {
         />
       );
       break;
-    case "project":
+    case "Project":
       navIcon = (
         <FaCode
           title="Project"
@@ -47,7 +43,7 @@ const NavIcon: React.FC<Props> = ({ path, icon }) => {
         />
       );
       break;
-    case "contact":
+    case "Contact":
       navIcon = (
         <HiChatBubbleOvalLeftEllipsis
           title="Contact"

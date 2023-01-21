@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import MainLayout from "./components/layout/MainLayout";
-import BulletNav from "./components/navigation/SideNav";
 import Navbar from "./components/navigation/Navbar";
+import BulletNav from "./components/navigation/SideNav";
 import SocialLeft from "./components/social/SocialLeft";
 import About from "./pages/About";
 import Contact from "./pages/Contact";

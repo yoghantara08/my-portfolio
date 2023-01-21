@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { backdropVariants } from "../../animation/nav-motion";
+
 const Backdrop = () => {
   return (
     <motion.div

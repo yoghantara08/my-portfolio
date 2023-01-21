@@ -1,23 +1,17 @@
+import { useEffect } from "react";
 import { motion, AnimatePresence, useCycle } from "framer-motion";
 import { Link } from "react-router-dom";
 import { logo } from "../../assets";
-import NavLink from "./NavLink";
 import { CgMenuRight, CgClose } from "react-icons/cg";
 import {
   linksVariants,
   logoVariants,
   navbarVariants,
 } from "../../animation/nav-motion";
-import Backdrop from "../backdrop/Backdrop";
 import useWindowSize, { Size } from "../../hooks/useWindowSize";
-import { useEffect } from "react";
-
-const navLink: { path: string; item: string }[] = [
-  { path: "/about", item: "About" },
-  { path: "/skills", item: "Skills" },
-  { path: "/project", item: "Project" },
-  { path: "/contact", item: "Contact" },
-];
+import Backdrop from "../backdrop/Backdrop";
+import NavLink from "./NavLink";
+import { navLink } from "../../content";
 
 const Navbar = () => {
   const [open, cycleOpen] = useCycle(false, true);
@@ -80,7 +74,7 @@ const Navbar = () => {
             >
               <div
                 className={`flex flex-col justify-center h-full ${
-                  windowSize.height > 650 ? "space-y-24" : "space-y-12"
+                  windowSize.height > 650 ? "space-y-20" : "space-y-8"
                 }`}
               >
                 {navLink.map((nav, index) => (

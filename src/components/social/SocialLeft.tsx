@@ -1,39 +1,7 @@
 import { motion } from "framer-motion";
-import {
-  childrenVariants,
-  parentVariants,
-} from "../../animation/social-motion";
-import Discord from "./Discord";
-import GitHub from "./GitHub";
-import Instagram from "./Instagram";
-import LinkedIn from "./LinkedIn";
-import Twitter from "./Twitter";
-
-interface Socials {
-  name: string;
-  logo: JSX.Element;
-  link: string;
-}
-
-const socials: Socials[] = [
-  { name: "GitHub", logo: <GitHub />, link: "https://github.com/yoghantara08" },
-  {
-    name: "LinkedIn",
-    logo: <LinkedIn />,
-    link: "https://www.linkedin.com/in/yoghantara/",
-  },
-  {
-    name: "Instagram",
-    logo: <Instagram />,
-    link: "https://www.instagram.com/gustutyoghantara/",
-  },
-  {
-    name: "Discord",
-    logo: <Discord />,
-    link: "https://discordapp.com/users/853617679588261899",
-  },
-  { name: "Twitter", logo: <Twitter />, link: "https://twitter.com/kusho08" },
-];
+import { parentVariants } from "../../animation/social-motion";
+import { socials } from "../../content";
+import Social from "./Social";
 
 const SocialLeft = () => {
   return (
@@ -46,17 +14,7 @@ const SocialLeft = () => {
         animate="animate"
       >
         {socials.map((social) => (
-          <motion.li key={social.name} variants={childrenVariants.variants}>
-            <motion.a
-              href={social.link}
-              target="_blank"
-              rel="noreferrer"
-              className="block"
-              whileHover={{ translateY: -2 }}
-            >
-              {social.logo}
-            </motion.a>
-          </motion.li>
+          <Social key={social.name} name={social.name} link={social.link} />
         ))}
       </motion.ul>
     </nav>

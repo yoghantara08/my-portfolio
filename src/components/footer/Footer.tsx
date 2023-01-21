@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { footerVariants } from "../../animation/nav-motion";
+import { myPortfolioLink } from "../../content";
 import SocialFooter from "../social/SocialFooter";
 
 const Footer = () => {
@@ -12,7 +13,7 @@ const Footer = () => {
     >
       <SocialFooter />
       <a
-        href="https://github.com/yoghantara08/my-portfolio"
+        href={myPortfolioLink}
         target="_blank"
         rel="noreferrer"
         className="text-gray text-sm pb-4 md:pb-5 cursor-pointer group hover:text-aqua"
