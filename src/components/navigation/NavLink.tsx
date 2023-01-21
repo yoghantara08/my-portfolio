@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { linkVariants } from "../../animation/navigation";
+import { linkVariants } from "../../animation/nav-motion";
 
 interface Props {
   nav: { path: string; item: string };
@@ -25,7 +25,7 @@ const NavLink: React.FC<Props> = ({ nav, index, mobile }) => {
 
   return (
     <li className="overflow-hidden">
-      <motion.div variants={linkVariants}>
+      <motion.div variants={linkVariants.variants}>
         <Link to={nav.path} className="font-semibold  group">
           <span className=" text-aqua">0{index + 1}. </span>
           <span className="text-lg group-hover:text-aqua duration-300">

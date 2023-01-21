@@ -7,7 +7,7 @@ import {
   linksVariants,
   logoVariants,
   navbarVariants,
-} from "../../animation/navigation";
+} from "../../animation/nav-motion";
 import Backdrop from "../backdrop/Backdrop";
 import useWindowSize, { Size } from "../../hooks/useWindowSize";
 import { useEffect } from "react";
@@ -45,14 +45,14 @@ const Navbar = () => {
             src={logo}
             alt="yoghantara"
             className="block w-10 h-10 md:w-11 md:h-12 pt-0 md:pt-1"
-            variants={logoVariants}
+            variants={logoVariants.variants}
             initial="initial"
             animate="animate"
           />
         </Link>
         <motion.ul
           className="hidden md:flex items-center space-x-5"
-          variants={linksVariants}
+          variants={linksVariants.variants}
           initial="initial"
           animate="animate"
         >
@@ -73,7 +73,7 @@ const Navbar = () => {
             <motion.ul
               className="md:hidden absolute top-0 right-0 h-screen w-full max-w-[70%] sm:max-w-[320px]
               flex justify-center px-10 bg-slate-800"
-              variants={navbarVariants}
+              variants={navbarVariants.variants}
               initial="closed"
               animate="opened"
               exit="exit"

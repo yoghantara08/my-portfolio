@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { AiOutlineCloudDownload } from "react-icons/ai";
 import { FaTelegramPlane } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { hiVariants, homeVariants } from "../../animation/home";
+import { hiVariants, homeVariants } from "../../animation/home-motion";
 import { resume } from "../../assets";
 import Button from "../../components/button/Button";
 import Container from "../../components/layout/Container";

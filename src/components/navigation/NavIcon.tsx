@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import { bulletVariants, diamondVariants } from "../../animation/navigation";
+import { bulletVariants, diamondVariants } from "../../animation/nav-motion";
 import { FaHome, FaUserSecret, FaPencilRuler, FaCode } from "react-icons/fa";
 import { HiChatBubbleOvalLeftEllipsis } from "react-icons/hi2";
 
@@ -58,11 +58,11 @@ const NavIcon: React.FC<Props> = ({ path, icon }) => {
   }
 
   return (
-    <motion.li className="group relative" variants={bulletVariants}>
+    <motion.li className="group relative" variants={bulletVariants.variants}>
       <Link to={path} className="flex justify-center items-center">
         <motion.div
           className="text-xl z-20"
-          variants={diamondVariants}
+          variants={diamondVariants.variants}
           whileHover="hover"
           whileTap="tap"
         >

@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
-import { childrenVariants, parentVariants } from "../../animation/social";
+import {
+  childrenVariants,
+  parentVariants,
+} from "../../animation/social-motion";
 import Discord from "./Discord";
 import GitHub from "./GitHub";
 import Instagram from "./Instagram";
@@ -38,12 +41,12 @@ const SocialLeft = () => {
       <motion.ul
         className=" flex flex-col justify-center space-y-6
         after:h-[90px] after:w-[1px] after:bg-gray after:content-[''] after:block after:mx-auto after:mt-6"
-        variants={parentVariants}
+        variants={parentVariants.variants}
         initial="initial"
         animate="animate"
       >
         {socials.map((social) => (
-          <motion.li key={social.name} variants={childrenVariants}>
+          <motion.li key={social.name} variants={childrenVariants.variants}>
             <motion.a
               href={social.link}
               target="_blank"

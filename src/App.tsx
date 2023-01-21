@@ -12,16 +12,11 @@ import Home from "./pages/home/Home";
 import Project from "./pages/Project";
 import Skills from "./pages/Skills";
 
-const variant = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
-};
-
 function App() {
   const location = useLocation();
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
+  // Load component after all animation is completed
   useEffect(() => {
     setTimeout(() => {
       setIsLoaded(true);
@@ -33,19 +28,17 @@ function App() {
       <Navbar />
       <BulletNav />
       <SocialLeft />
-      <motion.div variants={variant} initial="initial" animate="animate">
-        <AnimatePresence mode="wait">
-          {isLoaded && (
-            <Routes location={location} key={location.key}>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/skills" element={<Skills />} />
-              <Route path="/project" element={<Project />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          )}
-        </AnimatePresence>
-      </motion.div>
+      <AnimatePresence mode="wait">
+        {isLoaded && (
+          <Routes location={location} key={location.key}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        )}
+      </AnimatePresence>
       <Footer />
     </MainLayout>
   );

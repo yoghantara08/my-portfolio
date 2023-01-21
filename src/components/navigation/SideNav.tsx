@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { bulletNavVariants } from "../../animation/navigation";
+import { bulletNavVariants } from "../../animation/nav-motion";
 import NavIcon from "./NavIcon";
 
 const navLink: {
@@ -19,7 +19,7 @@ const BulletNav = () => {
     <nav className="hidden absolute top-0 bottom-0 h-screen right-[60px] md:flex justify-center flex-col mb-20 z-20">
       <motion.ul
         className="space-y-20"
-        variants={bulletNavVariants}
+        variants={bulletNavVariants.variants}
         initial="initial"
         animate="animate"
       >

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { footerVariants } from "../../animation/navigation";
+import { footerVariants } from "../../animation/nav-motion";
 import SocialFooter from "../social/SocialFooter";
 
 const Footer = () => {
