@@ -3,9 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import { bulletVariants, diamondVariants } from "../../animation/nav-motion";
 import { FaHome, FaUserSecret, FaPencilRuler, FaCode } from "react-icons/fa";
 import { HiChatBubbleOvalLeftEllipsis } from "react-icons/hi2";
-import { Nav } from "../../content";
+import { INav } from "../../content";
 
-const NavIcon: React.FC<Nav> = ({ path, item }) => {
+const NavIcon: React.FC<INav> = ({ path, item }) => {
   const location = useLocation();
 
   let navIcon;

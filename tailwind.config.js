@@ -7,11 +7,11 @@ module.exports = {
         black: "#10141D",
         white: "#e6e6e6",
         darkBlue: "#252F47",
-        blue: "#012EAA",
+        blue: "#1e54eb",
         darkGray: "#525456",
         gray: "#BABBC0",
         aqua: "#00c6bc",
-        red: "#ef4782",
+        red: "#e63f79",
       },
       fontFamily: {
         roboto: ["Roboto Mono", "monospace"],

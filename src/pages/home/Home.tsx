@@ -10,7 +10,7 @@ import HomeText from "./HomeText";
 
 const Home = () => {
   return (
-    <Container className=" shadow-shadowEven" animation={homeVariants}>
+    <Container className="shadow-shadowEven" animation={homeVariants}>
       <main className="mx-6 md:mx-10 lg:mx-24 mt-16 md:mt-24 lg:mt-32 mb-12">
         <motion.h4
           className="text-md font-roboto text-aqua mb-3"

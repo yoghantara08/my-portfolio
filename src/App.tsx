@@ -6,7 +6,7 @@ import MainLayout from "./components/layout/MainLayout";
 import Navbar from "./components/navigation/Navbar";
 import BulletNav from "./components/navigation/SideNav";
 import SocialLeft from "./components/social/SocialLeft";
-import About from "./pages/About";
+import About from "./pages/about/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/home/Home";
 import Project from "./pages/Project";

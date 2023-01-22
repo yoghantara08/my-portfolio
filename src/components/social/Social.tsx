@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { childrenVariants } from "../../animation/social-motion";
-import { Socials } from "../../content";
+import { ISocials } from "../../content";
 import Discord from "./IconDiscord";
 import GitHub from "./IconGitHub";
 import Instagram from "./IconInstagram";
 import LinkedIn from "./IconLinkedIn";
 import Twitter from "./IconTwitter";
 
-const Social: React.FC<Socials> = ({ name, link }) => {
+const Social: React.FC<ISocials> = ({ name, link }) => {
   let icon;
 
   switch (name) {

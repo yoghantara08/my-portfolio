@@ -1,14 +1,25 @@
-export interface Nav {
+import { code, mobilelegend, rindik } from "../assets";
+
+export interface INav {
   path: string;
   item: "Home" | "About" | "Skills" | "Project" | "Contact";
 }
 
-export interface Socials {
+export interface ISocials {
   name: "GitHub" | "LinkedIn" | "Instagram" | "Discord" | "Twitter";
   link: string;
 }
 
-export const navLink: Nav[] = [
+export interface IHobbies {
+  hobby: string;
+  icon: "game" | "code" | "music";
+  pic: string;
+  picText: string;
+  description: string;
+  description2?: string;
+}
+
+export const navLink: INav[] = [
   { path: "/", item: "Home" },
   { path: "/about", item: "About" },
   { path: "/skills", item: "Skills" },
@@ -16,7 +27,7 @@ export const navLink: Nav[] = [
   { path: "/contact", item: "Contact" },
 ];
 
-export const socials: Socials[] = [
+export const socials: ISocials[] = [
   { name: "GitHub", link: "https://github.com/yoghantara08" },
   {
     name: "LinkedIn",
@@ -33,4 +44,45 @@ export const socials: Socials[] = [
   { name: "Twitter", link: "https://twitter.com/kusho08" },
 ];
 
-export const myPortfolioLink = "https://github.com/yoghantara08/my-portfolio";
+export const links = {
+  portfolio: "https://github.com/yoghantara08/my-portfolio",
+  omega: "https://www.instagram.com/omegasquadbali/",
+};
+
+export const aboutMe = {
+  paragraph1:
+    "Hi Everyone! My name is Ida Bagus Ketut Yoghantara usually called Gustut or Yoghantara. I enjoy creating things that live on the internet. My passion for Web Development started back in September 2021.",
+  paragraph2:
+    "I am driven and ambitious. I thrive on challenges and establish goals for myself regularly, so I always have something to strive ahead. I enjoy meeting new people and finding out about their experiences and backgrounds.",
+};
+
+export const HobbiesArr: IHobbies[] = [
+  {
+    hobby: "Playing Video Games",
+    icon: "game",
+    pic: mobilelegend,
+    picText:
+      "1st Place Mobile Legends Tournament, Edufair Esport Championship 2019",
+    description:
+      "I've been playing video games since I was in kindergarten. I still enjoy this hobby even now. I have played a lot of genres, including MMORPG, ARPG, MOBA, Strategy, FPS, etc. But what I like the most are MOBA and MMORPG. In high school, I had an ESPORT Mobile Legends team named Omega Squad with seven members. We often take part in Mobile Legends competitions and win several of them.",
+  },
+  {
+    hobby: "Programming",
+    icon: "code",
+    pic: code,
+    picText: "Visual Studio Code",
+    description:
+      "I love Programming, especially in the field of Web Development. I began learning web development in September 2021. It started when I was in a very bad state and wanted to improve myself. On September 6, 2021, I found a video named Jalur Belajar Web Development (Front End vs. Back End) from WEB Programming UNPAS Youtube channel.",
+    description2:
+      "With my determination to improve and this video that I accidentally found, I started my journey in learning Web development. Until now, I have studied several Web technologies, including HTML, CSS, JavaScript, TypeScript, React, Tailwindcss, Bootstrap, Java, Spring Boot, and MySQL.",
+  },
+  {
+    hobby: "Playing Balinese Instrument",
+    icon: "music",
+    pic: rindik,
+    picText:
+      "Playing Rindik (Traditional Balinese percussion instrument made from bamboo)",
+    description:
+      "I was born into a family that loves Balinese Traditional Arts. Both of my parents graduated from the University of the Arts and because of that since childhood I have been familiar with various kinds of traditional Balinese arts, including Balinese Dance and Balinese Gamelan. This hobby of playing Rindik originated from my grandfather who gave me an antique Balinese Rindik. Since then I have enjoyed playing Rindik, a gift from my grandfather.",
+  },
+];
