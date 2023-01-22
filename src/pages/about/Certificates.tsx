@@ -6,7 +6,7 @@ const Certificates = () => {
   return (
     <ul className="space-y-5 mt-10 lg:mt-0">
       {certificate.map((cer) => (
-        <li className="flex flex-col lg:flex-row">
+        <li className="flex flex-col lg:flex-row" key={cer.name}>
           <div className="flex">
             <TiArrowRightOutline className="text-2xl mr-3 text-red" />
             <div className="space-y-2">

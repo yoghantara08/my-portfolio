@@ -128,3 +128,18 @@ export const certificate = [
       "https://www.udemy.com/certificate/UC-3c395163-3747-4d9c-b513-f6faabc8648e/",
   },
 ];
+
+export const skills = [
+  { logo: "HTML" },
+  { logo: "CSS" },
+  { logo: "JavaScript" },
+  { logo: "TypeScript" },
+  { logo: "Java" },
+  { logo: "React" },
+  { logo: "Tailwindcss" },
+  { logo: "Bootstrap" },
+  { logo: "Spring" },
+  { logo: "MySQL" },
+  { logo: "Git" },
+  { logo: "Firebase" },
+];

@@ -5,7 +5,7 @@ const EducationList = () => {
   return (
     <ul className="space-y-5">
       {education.map((edu) => (
-        <li className="flex">
+        <li className="flex" key={edu.school}>
           <TiArrowRightOutline className="text-2xl mr-3 text-red" />
           <div className="space-y-2">
             <h4 className="text-red text-lg font-bold">{edu.school}</h4>
