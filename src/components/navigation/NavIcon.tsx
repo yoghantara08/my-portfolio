@@ -35,7 +35,7 @@ const NavIcon: React.FC<INav> = ({ path, item }) => {
         />
       );
       break;
-    case "Project":
+    case "Projects":
       navIcon = (
         <FaCode
           title="Project"

@@ -5,7 +5,7 @@ import { linkVariants } from "../../animation/nav-motion";
 interface Props {
   nav: {
     path: string;
-    item: "Home" | "About" | "Skills" | "Project" | "Contact";
+    item: "Home" | "About" | "Skills" | "Projects" | "Contact";
   };
   index: number;
   mobile: boolean;

@@ -1,8 +1,21 @@
-import { code, mobilelegend, react, rindik, springboot } from "../assets";
+import {
+  abccars,
+  abcjobs,
+  abclearning,
+  code,
+  knowyourneighborhood,
+  mobilelegend,
+  react,
+  rindik,
+  springboot,
+  taracafe,
+  webstikom,
+} from "../assets";
 
+// Types
 export interface INav {
   path: string;
-  item: "Home" | "About" | "Skills" | "Project" | "Contact";
+  item: "Home" | "About" | "Skills" | "Projects" | "Contact";
 }
 
 export interface ISocials {
@@ -19,11 +32,21 @@ export interface IHobbies {
   description2?: string;
 }
 
+export interface IProject {
+  image: string;
+  tags: string[];
+  description: string;
+  title: string;
+  demo?: string;
+  github: string;
+}
+
+// Contents
 export const navLink: INav[] = [
   { path: "/", item: "Home" },
   { path: "/about", item: "About" },
   { path: "/skills", item: "Skills" },
-  { path: "/project", item: "Project" },
+  { path: "/projects", item: "Projects" },
   { path: "/contact", item: "Contact" },
 ];
 
@@ -134,12 +157,65 @@ export const skills = [
   { logo: "CSS" },
   { logo: "JavaScript" },
   { logo: "TypeScript" },
-  { logo: "Java" },
   { logo: "React" },
   { logo: "Tailwindcss" },
   { logo: "Bootstrap" },
+  { logo: "Java" },
   { logo: "Spring" },
   { logo: "MySQL" },
   { logo: "Git" },
   { logo: "Firebase" },
+];
+
+export const projects: IProject[] = [
+  {
+    title: "ABC Cars Portal",
+    description:
+      "A website application that offers a marketplace for buying and selling used cars.",
+    image: abccars,
+    github: "https://github.com/yoghantara08/ABC-Cars-Portal",
+    tags: ["Bootstrap", "Spring Boot", "MySQL"],
+  },
+  {
+    title: "ABC Jobs Portal",
+    description:
+      "A website application that allows user find a job and apply for job oppurtunities.",
+    image: abcjobs,
+    github: "https://github.com/yoghantara08/ABC-Jobs-Portal",
+    tags: ["Bootstrap", "Spring MVC", "MySQL"],
+  },
+  {
+    title: "Know Your Neighborhood",
+    description:
+      "A website application that provides users with information about their local neighborhood.",
+    image: knowyourneighborhood,
+    github: "https://github.com/yoghantara08/Know-Your-Neighborhood",
+    tags: ["React", "Tailwindcss", "Axios", "Spring Boot", "OAuth2", "MySQL"],
+  },
+  {
+    title: "Web STIKOM Bali",
+    description: "Redesign of ITB STIKOM Bali University official website.",
+    image: webstikom,
+    github: "https://github.com/yoghantara08/UAS-Web-Stikom-Bali",
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "AOS"],
+    demo: "https://yoghantara08.github.io/UAS-Web-Stikom-Bali/",
+  },
+  {
+    title: "TaraCafe",
+    description:
+      "TaraCafe is a Coffee Shop Website that serve the best coffee.",
+    image: taracafe,
+    github: "https://github.com/yoghantara08/TaraCafe",
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "jQuery"],
+    demo: "https://yoghantara08.github.io/TaraCafe/",
+  },
+  {
+    title: "ABC Learning Center",
+    description:
+      "A project-based website dedicated for IT Training institute that conducts courses like Front-end and Back-end Web development.",
+    image: abclearning,
+    github: "https://github.com/yoghantara08/ABC-Learning-Center",
+    tags: ["React", "CSS", "Vite"],
+    demo: "https://abc-learning-center.vercel.app/",
+  },
 ];

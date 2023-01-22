@@ -9,7 +9,7 @@ import SocialLeft from "./components/social/SocialLeft";
 import About from "./pages/about/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/home/Home";
-import Project from "./pages/Project";
+import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/skills" element={<Skills />} />
-            <Route path="/project" element={<Project />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         )}
