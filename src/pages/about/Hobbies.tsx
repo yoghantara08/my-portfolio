@@ -26,7 +26,7 @@ const Hobbies = () => {
           {HobbiesArr.map((item) => (
             <li
               key={item.hobby}
-              className={`flex justify-center min-w-[262px] ${
+              className={`flex justify-center min-w-[220px] ${
                 item === selectedTab ? "text-red" : ""
               }`}
               onClick={() => setSelectedTab(item)}

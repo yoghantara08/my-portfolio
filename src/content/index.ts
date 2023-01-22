@@ -1,4 +1,4 @@
-import { code, mobilelegend, rindik } from "../assets";
+import { code, mobilelegend, react, rindik, springboot } from "../assets";
 
 export interface INav {
   path: string;
@@ -58,7 +58,7 @@ export const aboutMe = {
 
 export const HobbiesArr: IHobbies[] = [
   {
-    hobby: "Playing Video Games",
+    hobby: "Video Games",
     icon: "game",
     pic: mobilelegend,
     picText:
@@ -77,12 +77,54 @@ export const HobbiesArr: IHobbies[] = [
       "With my determination to improve and this video that I accidentally found, I started my journey in learning Web development. Until now, I have studied several Web technologies, including HTML, CSS, JavaScript, TypeScript, React, Tailwindcss, Bootstrap, Java, Spring Boot, and MySQL.",
   },
   {
-    hobby: "Playing Balinese Instrument",
+    hobby: "Balinese Instrument",
     icon: "music",
     pic: rindik,
     picText:
       "Playing Rindik (Traditional Balinese percussion instrument made from bamboo)",
     description:
       "I was born into a family that loves Balinese Traditional Arts. Both of my parents graduated from the University of the Arts and because of that since childhood I have been familiar with various kinds of traditional Balinese arts, including Balinese Dance and Balinese Gamelan. This hobby of playing Rindik originated from my grandfather who gave me an antique Balinese Rindik. Since then I have enjoyed playing Rindik, a gift from my grandfather.",
+  },
+];
+
+export const education = [
+  {
+    school: "Lithan EduClass Academy",
+    timeline: "2022 - Present",
+    place: "Singapore",
+    description: "Applied Degree in Software Engineering",
+  },
+  {
+    school: "Institut Teknologi dan Bisnis STIKOM Bali",
+    timeline: "2020 - Present",
+    place: "Bali, Indonesia",
+    description: "Bachelor of Science in Information Systems",
+  },
+  {
+    school: "SMAN 1 Kuta Utara",
+    timeline: "2017 - 2020",
+    place: "Bali, Indonesia",
+    description: "Highschool Diploma, Natural sciences",
+  },
+];
+
+export const certificate = [
+  {
+    name: "React - The Complete Guide incl Hooks, React Router, Redux",
+    from: "Udemy",
+    timeline: "Jan 2023",
+    pic: react,
+    alt: "React",
+    credential:
+      "https://www.udemy.com/certificate/UC-2a54fef6-5cb4-4fb4-b77a-5c28946f961c/",
+  },
+  {
+    name: "Spring & Hibernate for Beginners includes Spring Boot",
+    from: "Udemy",
+    timeline: "Nov 2022",
+    pic: springboot,
+    alt: "Spring Boot",
+    credential:
+      "https://www.udemy.com/certificate/UC-3c395163-3747-4d9c-b513-f6faabc8648e/",
   },
 ];

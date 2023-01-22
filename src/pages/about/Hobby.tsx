@@ -14,7 +14,7 @@ const Hobby: React.FC<Props> = ({
   description2,
 }) => {
   return (
-    <div className="flex flex-col md:grid md:grid-cols-2 gap-0 md:gap-10 py-3 mx:py-6 mx-6 md:px-12">
+    <div className="flex flex-col lg:grid lg:grid-cols-2 gap-0 md:gap-10 py-3 mx:py-6 mx-6 md:px-12">
       <picture className="rounded order-1">
         <img
           src={pic}
@@ -27,7 +27,7 @@ const Hobby: React.FC<Props> = ({
           </p>
         )}
       </picture>
-      <div className="pb-6 md:order-2 text-[17px] font-inter">
+      <div className="pb-6 lg:order-2 md:text-[17px] font-inter">
         <p>{description}</p>
         {description2 && <p className="mt-2">{description2}</p>}
       </div>
