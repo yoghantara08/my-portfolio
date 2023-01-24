@@ -12,10 +12,7 @@ const Home = () => {
   return (
     <Container className="shadow-shadowEven" animation={homeVariants}>
       <main className="mx-6 md:mx-10 lg:mx-24 mt-16 md:mt-24 lg:mt-32 mb-12">
-        <motion.h4
-          className="text-md font-roboto text-aqua mb-3"
-          variants={hiVariants.variants}
-        >
+        <motion.h4 className="text-md font-roboto text-aqua mb-3">
           Hi Everyone, my name is
         </motion.h4>
         <h1 className="font-bold text-slate-300 text-7xl mb-3">Yoghantara.</h1>
