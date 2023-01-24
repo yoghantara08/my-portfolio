@@ -1,17 +1,17 @@
+import { AnimatePresence, motion, useCycle } from "framer-motion";
 import { useEffect } from "react";
-import { motion, AnimatePresence, useCycle } from "framer-motion";
+import { CgClose, CgMenuRight } from "react-icons/cg";
 import { Link } from "react-router-dom";
-import { logo } from "../../assets";
-import { CgMenuRight, CgClose } from "react-icons/cg";
 import {
   linksVariants,
   logoVariants,
   navbarVariants,
 } from "../../animation/nav-motion";
+import { logo } from "../../assets";
+import { navLink } from "../../content";
 import useWindowSize, { Size } from "../../hooks/useWindowSize";
 import Backdrop from "../backdrop/Backdrop";
 import NavLink from "./NavLink";
-import { navLink } from "../../content";
 
 const Navbar = () => {
   const [open, cycleOpen] = useCycle(false, true);
@@ -45,7 +45,7 @@ const Navbar = () => {
           />
         </Link>
         <motion.ul
-          className="hidden md:flex items-center space-x-5"
+          className="hidden md:flex items-center space-x-6"
           variants={linksVariants.variants}
           initial="initial"
           animate="animate"

@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { FaCode, FaHome, FaPencilRuler, FaUserSecret } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { Link, useLocation } from "react-router-dom";
-import { bulletVariants } from "../../animation/nav-motion";
+import { useLocation } from "react-router-dom";
 import { INav } from "../../content";
 
 const NavIcon: React.FC<INav> = ({ path, item }) => {
@@ -58,13 +57,7 @@ const NavIcon: React.FC<INav> = ({ path, item }) => {
       break;
   }
 
-  return (
-    <motion.li className="group relative" variants={bulletVariants.variants}>
-      <Link to={path} className="flex justify-center items-center">
-        <motion.div className="z-20">{navIcon}</motion.div>
-      </Link>
-    </motion.li>
-  );
+  return <motion.div className="z-20">{navIcon}</motion.div>;
 };
 
 export default NavIcon;

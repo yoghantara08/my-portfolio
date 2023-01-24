@@ -44,7 +44,7 @@ const NavLink: React.FC<Props> = ({ nav, index, mobile }) => {
         >
           <NavIcon path={nav.path} item={nav.item} />
           <span
-            className={`duration-300 ${
+            className={`duration-300 text-[17px] ${
               location.pathname === nav.path ? "text-aqua" : ""
             }`}
           >
