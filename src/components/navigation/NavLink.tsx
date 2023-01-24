@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { linkVariants } from "../../animation/nav-motion";
+import NavIcon from "./NavIcon";
 
 interface Props {
   nav: {
@@ -12,6 +13,8 @@ interface Props {
 }
 
 const NavLink: React.FC<Props> = ({ nav, index, mobile }) => {
+  const location = useLocation();
+
   if (mobile) {
     return (
       <li>
@@ -19,19 +22,34 @@ const NavLink: React.FC<Props> = ({ nav, index, mobile }) => {
           to={nav.path}
           className="flex flex-col text-center font-semibold text-xl group"
         >
-          <span className="text-lg text-aqua">0{index + 1}. </span>
-          <span className="group-hover:text-aqua duration-300">{nav.item}</span>
+          <NavIcon path={nav.path} item={nav.item} />
+          <span
+            className={`group-hover:text-aqua duration-300 ${
+              location.pathname === nav.path ? "text-aqua" : ""
+            }`}
+          >
+            {nav.item}
+          </span>
         </Link>
       </li>
     );
   }
 
   return (
-    <li className="overflow-hidden">
+    <li className="overflow-hidden group">
       <motion.div variants={linkVariants.variants}>
-        <Link to={nav.path} className="font-semibold  group">
-          <span className="text-aqua">0{index + 1}. </span>
-          <span className="group-hover:text-aqua duration-300">{nav.item}</span>
+        <Link
+          to={nav.path}
+          className="font-semibold flex items-center space-x-2 group-hover:text-aqua "
+        >
+          <NavIcon path={nav.path} item={nav.item} />
+          <span
+            className={`duration-300 ${
+              location.pathname === nav.path ? "text-aqua" : ""
+            }`}
+          >
+            {nav.item}
+          </span>
         </Link>
       </motion.div>
     </li>

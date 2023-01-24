@@ -9,15 +9,12 @@ const LinkedIn = () => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="w-[24px] h-[24px] text-gray"
+      className="w-[24px] h-[24px] text-gray hover:text-aqua"
     >
       <title>LinkedIn</title>
-      <path
-        className="text-gray"
-        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-      ></path>
-      <rect className="text-gray" x="2" y="9" width="4" height="12"></rect>
-      <circle className="text-gray" cx="4" cy="4" r="2"></circle>
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+      <rect x="2" y="9" width="4" height="12"></rect>
+      <circle cx="4" cy="4" r="2"></circle>
     </svg>
   );
 };

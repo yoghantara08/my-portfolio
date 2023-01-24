@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
+import { FaCode, FaHome, FaPencilRuler, FaUserSecret } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
-import { bulletVariants, diamondVariants } from "../../animation/nav-motion";
-import { FaHome, FaUserSecret, FaPencilRuler, FaCode } from "react-icons/fa";
-import { HiChatBubbleOvalLeftEllipsis } from "react-icons/hi2";
+import { bulletVariants } from "../../animation/nav-motion";
 import { INav } from "../../content";
 
 const NavIcon: React.FC<INav> = ({ path, item }) => {
@@ -15,6 +15,7 @@ const NavIcon: React.FC<INav> = ({ path, item }) => {
       navIcon = (
         <FaHome
           title="Home"
+          className="group-hover:fill-aqua duration-300"
           fill={`${location.pathname === path ? "#00c6bc" : "#e6e6e6"}`}
         />
       );
@@ -23,6 +24,7 @@ const NavIcon: React.FC<INav> = ({ path, item }) => {
       navIcon = (
         <FaUserSecret
           title="About Me"
+          className="group-hover:fill-aqua duration-300"
           fill={`${location.pathname === path ? "#00c6bc" : "#e6e6e6"}`}
         />
       );
@@ -31,6 +33,7 @@ const NavIcon: React.FC<INav> = ({ path, item }) => {
       navIcon = (
         <FaPencilRuler
           title="Skills"
+          className="group-hover:fill-aqua duration-300"
           fill={`${location.pathname === path ? "#00c6bc" : "#e6e6e6"}`}
         />
       );
@@ -39,14 +42,16 @@ const NavIcon: React.FC<INav> = ({ path, item }) => {
       navIcon = (
         <FaCode
           title="Project"
+          className="group-hover:fill-aqua duration-300"
           fill={`${location.pathname === path ? "#00c6bc" : "#e6e6e6"}`}
         />
       );
       break;
     case "Contact":
       navIcon = (
-        <HiChatBubbleOvalLeftEllipsis
+        <MdEmail
           title="Contact"
+          className="group-hover:fill-aqua duration-300"
           fill={`${location.pathname === path ? "#00c6bc" : "#e6e6e6"}`}
         />
       );
@@ -56,14 +61,7 @@ const NavIcon: React.FC<INav> = ({ path, item }) => {
   return (
     <motion.li className="group relative" variants={bulletVariants.variants}>
       <Link to={path} className="flex justify-center items-center">
-        <motion.div
-          className="text-xl z-20"
-          variants={diamondVariants.variants}
-          whileHover="hover"
-          whileTap="tap"
-        >
-          {navIcon}
-        </motion.div>
+        <motion.div className="z-20">{navIcon}</motion.div>
       </Link>
     </motion.li>
   );

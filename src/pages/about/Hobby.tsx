@@ -27,7 +27,7 @@ const Hobby: React.FC<Props> = ({
           </p>
         )}
       </picture>
-      <div className="pb-6 lg:order-2 md:text-[17px] font-inter">
+      <div className="pb-6 lg:order-2 md:text-[17px] font-inter text-justify">
         <p>{description}</p>
         {description2 && <p className="mt-2">{description2}</p>}
       </div>

@@ -12,7 +12,7 @@ const AboutMe = () => {
         <span>Me</span>
       </h1>
       <div className="flex flex-col md:flex-row gap-10 justify-center items-center md:justify-start md:items-start">
-        <div className="space-y-3 max-w-[500px] text-[17px]">
+        <div className="space-y-3 max-w-[500px] text-[17px] text-justify">
           <p>{aboutMe.paragraph1}</p>
           <p>{aboutMe.paragraph2}</p>
         </div>

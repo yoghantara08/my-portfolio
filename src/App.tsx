@@ -4,8 +4,8 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import MainLayout from "./components/layout/MainLayout";
 import Navbar from "./components/navigation/Navbar";
-import BulletNav from "./components/navigation/SideNav";
 import SocialLeft from "./components/social/SocialLeft";
+import SocialRight from "./components/social/SocialRight";
 import About from "./pages/about/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/home/Home";
@@ -26,8 +26,8 @@ function App() {
   return (
     <MainLayout>
       <Navbar />
-      <BulletNav />
       <SocialLeft />
+      <SocialRight />
       <AnimatePresence mode="wait">
         {isLoaded && (
           <Routes location={location} key={location.key}>

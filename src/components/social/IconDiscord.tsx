@@ -5,7 +5,7 @@ const Discord = () => {
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid"
-      className="w-[24px] h-[24px] text-gray"
+      className="w-[24px] h-[24px] fill-gray hover:fill-aqua"
     >
       <title>Discord</title>
       <g id="SVGRepo_bgCarrier" strokeWidth="0" />
@@ -33,7 +33,6 @@ const Discord = () => {
             85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 
             C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 
             193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z"
-            fill="#BABBC0"
             fillRule="nonzero"
           ></path>
         </g>
