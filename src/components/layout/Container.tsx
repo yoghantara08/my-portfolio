@@ -10,7 +10,7 @@ interface Props {
 const Container: React.FC<Props> = ({ children, className, animation }) => {
   return (
     <motion.div
-      className="flex justify-center mt-32 font-lato"
+      className="flex justify-center mt-24 md:mt-32 font-lato"
       variants={animation?.variants}
       initial="initial"
       animate="animate"

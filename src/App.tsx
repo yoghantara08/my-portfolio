@@ -7,7 +7,7 @@ import Navbar from "./components/navigation/Navbar";
 import SocialLeft from "./components/social/SocialLeft";
 import SocialRight from "./components/social/SocialRight";
 import About from "./pages/about/About";
-import Contact from "./pages/Contact";
+import Contact from "./pages/contact/Contact";
 import Home from "./pages/home/Home";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";

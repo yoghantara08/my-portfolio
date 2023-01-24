@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { FaCode, FaHome, FaPencilRuler, FaUserSecret } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { useLocation } from "react-router-dom";
@@ -57,7 +56,11 @@ const NavIcon: React.FC<INav> = ({ path, item }) => {
       break;
   }
 
-  return <motion.div className="z-20">{navIcon}</motion.div>;
+  return (
+    <div className="group relative z-20">
+      <div className="flex justify-center items-center">{navIcon}</div>
+    </div>
+  );
 };
 
 export default NavIcon;
