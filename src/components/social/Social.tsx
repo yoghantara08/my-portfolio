@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { childrenVariants } from "../../animation/social-motion";
+import { socialVariants } from "../../animation/social-motion";
 import { ISocials } from "../../content";
 import Discord from "./IconDiscord";
 import GitHub from "./IconGitHub";
@@ -29,7 +29,7 @@ const Social: React.FC<ISocials> = ({ name, link }) => {
   }
 
   return (
-    <motion.li variants={childrenVariants.variants}>
+    <motion.li variants={socialVariants.variants}>
       <motion.a
         href={link}
         target="_blank"

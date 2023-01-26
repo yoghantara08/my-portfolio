@@ -68,33 +68,6 @@ export const backdropVariants: MotionProps = {
   },
 };
 
-export const bulletNavVariants: MotionProps = {
-  variants: {
-    initial: { opacity: 0 },
-    animate: {
-      opacity: 1,
-      transition: {
-        delayChildren: 2,
-        staggerChildren: 0.2,
-      },
-    },
-  },
-};
-
-export const bulletVariants: MotionProps = {
-  variants: {
-    initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { duration: 0.3 } },
-  },
-};
-
-export const diamondVariants: MotionProps = {
-  variants: {
-    hover: { scale: 1.2 },
-    tap: { translateY: -6 },
-  },
-};
-
 export const footerVariants: MotionProps = {
   variants: {
     initial: { opacity: 0 },

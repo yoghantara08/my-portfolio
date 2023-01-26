@@ -11,14 +11,8 @@
   scrollbar-width: thin;
 }
 
-html,
-body {
+html {
   overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-body {
-  position: relative;
 }
 
 .bg-gradient {

@@ -13,7 +13,10 @@ import useWindowSize, { Size } from "../../hooks/useWindowSize";
 import Backdrop from "../backdrop/Backdrop";
 import NavLink from "./NavLink";
 
-const Navbar = () => {
+const Navbar: React.FC<{ visible: boolean; yOffset: number }> = ({
+  visible,
+  yOffset,
+}) => {
   const [open, cycleOpen] = useCycle(false, true);
   const windowSize: Size = useWindowSize();
 
@@ -33,7 +36,12 @@ const Navbar = () => {
           </div>
         )}
       </AnimatePresence>
-      <nav className="fixed top-0 left-0 right-0 flex justify-between px-10 lg:px-20 py-6 font-roboto duration-500 z-20">
+      <nav
+        className={`${visible ? "top-0" : "-top-24"}
+        ${yOffset > 100 ? "" : ""}
+        fixed left-0 right-0 flex justify-between px-10 
+        lg:px-20 py-6 font-roboto duration-500 z-20`}
+      >
         <Link to="/">
           <motion.img
             src={logo}
