@@ -1,5 +1,5 @@
 import Container from "../../components/layout/Container";
-import Form from "./Form";
+import ContactForm from "../../components/form/ContactForm";
 import Information from "./Information";
 
 const Contact = () => {
@@ -14,7 +14,7 @@ const Contact = () => {
         </h1>
         <div className="flex flex-col md:grid md:grid-cols-2 gap-10">
           <Information />
-          <Form />
+          <ContactForm />
         </div>
       </main>
     </Container>
