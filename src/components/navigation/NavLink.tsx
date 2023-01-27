@@ -10,14 +10,15 @@ interface Props {
   };
   index: number;
   mobile: boolean;
+  onClick?: () => void;
 }
 
-const NavLink: React.FC<Props> = ({ nav, index, mobile }) => {
+const NavLink: React.FC<Props> = ({ nav, index, mobile, onClick }) => {
   const location = useLocation();
 
   if (mobile) {
     return (
-      <li>
+      <li onClick={onClick}>
         <Link
           to={nav.path}
           className="flex flex-col text-center font-semibold text-xl group"

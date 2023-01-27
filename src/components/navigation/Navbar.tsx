@@ -27,6 +27,9 @@ const Navbar: React.FC<{ visible: boolean; yOffset: number }> = ({
     }
   }, [cycleOpen, open, windowSize]);
 
+  // Close mobile nav when clicked
+  const closeNavMobile = () => (open ? cycleOpen() : "");
+
   return (
     <>
       <AnimatePresence mode="wait">
@@ -91,6 +94,7 @@ const Navbar: React.FC<{ visible: boolean; yOffset: number }> = ({
                     nav={nav}
                     index={index}
                     mobile={true}
+                    onClick={closeNavMobile}
                   />
                 ))}
               </div>
