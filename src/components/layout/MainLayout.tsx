@@ -1,25 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
+import useHandleScroll from "../../hooks/useHandleScroll";
 import Navbar from "../navigation/Navbar";
 
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [yOffset, setYOffset] = useState<number>(0);
-  const [visible, setVisible] = useState<boolean>(true);
+  const { handleScroll, visible, yOffset } = useHandleScroll();
 
   return (
     <div
       className="bg-black h-screen w-screen overflow-x-hidden text-white"
-      onScroll={(e) => {
-        const currentYOffset = e.currentTarget.scrollTop;
-        if (currentYOffset < yOffset) {
-          setVisible(true);
-        }
-
-        if (currentYOffset > yOffset) {
-          setVisible(false);
-        }
-
-        setYOffset(currentYOffset);
-      }}
+      onScroll={handleScroll}
     >
       <Navbar visible={visible} yOffset={yOffset} />
       {children}
