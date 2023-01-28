@@ -56,7 +56,7 @@ const Navbar: React.FC<{ visible: boolean; yOffset: number }> = ({
           />
         </Link>
         <motion.ul
-          className="hidden md:flex items-center space-x-6"
+          className="hidden md:flex items-center space-x-7"
           variants={linksVariants.variants}
           initial="initial"
           animate="animate"

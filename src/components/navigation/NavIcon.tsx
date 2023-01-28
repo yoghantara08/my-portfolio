@@ -58,7 +58,7 @@ const NavIcon: React.FC<INav> = ({ path, item }) => {
 
   return (
     <div className="group relative z-20">
-      <div className="flex justify-center items-center">{navIcon}</div>
+      <div className="flex justify-center items-center ">{navIcon}</div>
     </div>
   );
 };
