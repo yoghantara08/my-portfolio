@@ -72,6 +72,26 @@ export const links = {
   omega: "https://www.instagram.com/omegasquadbali/",
 };
 
+export const myname1 = [
+  "G",
+  "u",
+  "s",
+  "t",
+  "u",
+  "t",
+  " ",
+  "Y",
+  "o",
+  "g",
+  "h",
+  "a",
+  "n",
+  "t",
+  "a",
+  "r",
+  "a",
+];
+
 export const aboutMe = {
   paragraph1:
     "My name is Ida Bagus Ketut Yoghantara usually called Yoghantara. Currently, I'm studying at Lithan EduClass majoring in Applied Degree in Software Engineering and at ITB STIKOM Bali majoring in Information Systems. I enjoy creating things that live on the internet. My passion for Web Development started back in September 2021. ",
