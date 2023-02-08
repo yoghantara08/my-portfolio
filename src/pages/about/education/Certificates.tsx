@@ -12,8 +12,6 @@ const Certificates = () => {
   useEffect(() => {
     if (inView) {
       controls.start("animate");
-    } else {
-      controls.set("initial");
     }
   }, [controls, inView]);
 
