@@ -1,10 +1,31 @@
-import { FiExternalLink } from "react-icons/fi";
+import { motion, useAnimationControls } from "framer-motion";
+import { useEffect } from "react";
 import { TiArrowRightOutline } from "react-icons/ti";
-import { certificate } from "../../content";
+import { useInView } from "react-intersection-observer";
+import { rightSlideVariants } from "../../../animation/about-motion";
+import { certificate } from "../../../content";
 
 const Certificates = () => {
+  const controls = useAnimationControls();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("animate");
+    } else {
+      controls.set("initial");
+    }
+  }, [controls, inView]);
+
   return (
-    <ul className="space-y-5 mt-10 lg:mt-0">
+    <motion.ul
+      className="space-y-5 mt-10 lg:mt-0"
+      variants={rightSlideVariants.variants}
+      ref={ref}
+      initial="initial"
+      animate={controls}
+      exit="exit"
+    >
       {certificate.map((cer) => (
         <li className="flex flex-col lg:flex-row" key={cer.name}>
           <div className="flex">
@@ -17,15 +38,15 @@ const Certificates = () => {
                 </p>
                 <p>{cer.from}</p>
               </div>
-              <a
+              {/* <a
                 href={cer.credential}
                 target="_blank"
                 rel="noreferrer"
-                className="ml-1 flex items-center hover:text-aqua w-fit"
+                className="ml-1 flex items-center text-aqua w-fit"
               >
                 <span className="mr-2">Credential</span>
                 <FiExternalLink />
-              </a>
+              </a> */}
             </div>
           </div>
           <img
@@ -35,7 +56,7 @@ const Certificates = () => {
           />
         </li>
       ))}
-    </ul>
+    </motion.ul>
   );
 };
 

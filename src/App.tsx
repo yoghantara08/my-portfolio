@@ -16,19 +16,17 @@ function App() {
   const location = useLocation();
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const [footer, setFooter] = useState<boolean>(false);
-  const { width } = useWindowSize();
+  const { desktop, mobile } = useWindowSize();
 
   // Load component after all animation is completed
   useEffect(() => {
-    const desktop = width !== 0 && width >= 768;
-    const mobile = width !== 0 && width <= 767;
     if (desktop) {
       setTimeout(() => {
         setIsLoaded(true);
       }, 3500);
       setTimeout(() => {
         setFooter(true);
-      }, 5000);
+      }, 6000);
     }
 
     if (mobile) {
@@ -39,7 +37,7 @@ function App() {
         setFooter(true);
       }, 3300);
     }
-  }, [width]);
+  }, [desktop, mobile]);
 
   return (
     <MainLayout>

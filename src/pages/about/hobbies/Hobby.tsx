@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { hobbyVariants } from "../../../animation/about-motion";
+
 interface Props {
   hobby: string;
   pic: string;
@@ -14,7 +17,13 @@ const Hobby: React.FC<Props> = ({
   description2,
 }) => {
   return (
-    <div className="flex flex-col lg:grid lg:grid-cols-2 gap-0 md:gap-10 py-3 mx:py-6 mx-6 md:px-12">
+    <motion.div
+      className="flex flex-col lg:grid lg:grid-cols-2 gap-0 md:gap-10 py-3 mx:py-6 mx-6 md:px-12"
+      variants={hobbyVariants.variants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <picture className="rounded order-1">
         <img
           src={pic}
@@ -31,7 +40,7 @@ const Hobby: React.FC<Props> = ({
         <p>{description}</p>
         {description2 && <p className="mt-2">{description2}</p>}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

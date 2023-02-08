@@ -94,7 +94,7 @@ export const myname1 = [
 
 export const aboutMe = {
   paragraph1:
-    "My name is Ida Bagus Ketut Yoghantara usually called Yoghantara. Currently, I'm studying at Lithan EduClass majoring in Applied Degree in Software Engineering and at ITB STIKOM Bali majoring in Information Systems. I enjoy creating things that live on the internet. My passion for Web Development started back in September 2021. ",
+    "My name is Ida Bagus Ketut Yoghantara usually called Yoghantara. Currently, I'm studying at Lithan EduClass majoring in Applied Degree in Software Engineering and at ITB Stikom Bali majoring in Information Systems. I enjoy creating things that live on the internet. My passion for Web Development started back in September 2021. ",
   paragraph2:
     "I am driven and ambitious. I thrive on challenges and establish goals for myself regularly, so I always have something to strive ahead. I enjoy meeting new people and learning about their experiences and backgrounds. ",
 };

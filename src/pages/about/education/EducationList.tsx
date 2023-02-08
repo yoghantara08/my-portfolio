@@ -1,9 +1,31 @@
-import { education } from "../../content";
+import { useEffect } from "react";
+import { useAnimationControls, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { education } from "../../../content";
 import { TiArrowRightOutline } from "react-icons/ti";
+import { leftSlideVariants } from "../../../animation/about-motion";
 
 const EducationList = () => {
+  const controls = useAnimationControls();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("animate");
+    } else {
+      controls.set("initial");
+    }
+  }, [controls, inView]);
+
   return (
-    <ul className="space-y-5">
+    <motion.ul
+      className="space-y-5"
+      ref={ref}
+      variants={leftSlideVariants.variants}
+      initial="initial"
+      animate={controls}
+      exit="exit"
+    >
       {education.map((edu) => (
         <li className="flex" key={edu.school}>
           <TiArrowRightOutline className="text-2xl mr-3 text-red" />
@@ -19,7 +41,7 @@ const EducationList = () => {
           </div>
         </li>
       ))}
-    </ul>
+    </motion.ul>
   );
 };
 

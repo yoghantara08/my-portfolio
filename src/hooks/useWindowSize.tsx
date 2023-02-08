@@ -3,18 +3,26 @@ import { useEffect, useState } from "react";
 export interface Size {
   width: number;
   height: number;
+  desktop: boolean;
+  mobile: boolean;
 }
 
 const useWindowSize = (): Size => {
   const [windowSize, setWindowSize] = useState<Size>({
     width: 0,
     height: 0,
+    desktop: false,
+    mobile: false,
   });
 
   const handleResize = () => {
+    const desktop = window.innerWidth !== 0 && window.innerWidth >= 768;
+    const mobile = window.innerWidth !== 0 && window.innerWidth <= 767;
     setWindowSize({
       width: window.innerWidth,
       height: window.innerHeight,
+      desktop: desktop,
+      mobile: mobile,
     });
   };
 
