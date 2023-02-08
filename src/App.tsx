@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer";
 import MainLayout from "./components/layout/MainLayout";
 import SocialLeft from "./components/social/SocialLeft";
 import SocialRight from "./components/social/SocialRight";
+import useWindowSize from "./hooks/useWindowSize";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Home from "./pages/Home";
@@ -14,13 +15,31 @@ import Skills from "./pages/Skills";
 function App() {
   const location = useLocation();
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const [footer, setFooter] = useState<boolean>(false);
+  const { width } = useWindowSize();
 
   // Load component after all animation is completed
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoaded(true);
-    }, 3500);
-  }, []);
+    const desktop = width !== 0 && width >= 768;
+    const mobile = width !== 0 && width <= 767;
+    if (desktop) {
+      setTimeout(() => {
+        setIsLoaded(true);
+      }, 3500);
+      setTimeout(() => {
+        setFooter(true);
+      }, 5000);
+    }
+
+    if (mobile) {
+      setTimeout(() => {
+        setIsLoaded(true);
+      }, 800);
+      setTimeout(() => {
+        setFooter(true);
+      }, 3300);
+    }
+  }, [width]);
 
   return (
     <MainLayout>
@@ -37,7 +56,7 @@ function App() {
           </Routes>
         )}
       </AnimatePresence>
-      <Footer />
+      {footer && <Footer />}
     </MainLayout>
   );
 }

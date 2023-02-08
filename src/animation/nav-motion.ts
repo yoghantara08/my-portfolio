@@ -32,7 +32,7 @@ export const linksVariants: MotionProps = {
     animate: {
       opacity: 1,
       transition: {
-        delayChildren: 1,
+        delayChildren: 0.7,
         staggerChildren: 0.3,
       },
     },
@@ -71,6 +71,13 @@ export const backdropVariants: MotionProps = {
 export const footerVariants: MotionProps = {
   variants: {
     initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { delay: 4.5 } },
+    animate: { opacity: 1 },
+  },
+};
+
+export const menuBurgerVariants: MotionProps = {
+  variants: {
+    initial: { opacity: 0 },
+    animate: { opacity: 1, transition: { delay: 0.5, duration: 1 } },
   },
 };

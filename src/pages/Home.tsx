@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { AiOutlineCloudDownload } from "react-icons/ai";
-import { FaTelegramPlane } from "react-icons/fa";
+import { ImArrowRight2 } from "react-icons/im";
 import { Link } from "react-router-dom";
 import {
   buttonsVariants,
@@ -49,7 +49,7 @@ const Home = () => {
           variants={buttonsVariants.variants}
         >
           <motion.div variants={buttonVariants.variants}>
-            <Button type="button" className="space-x-4 mt-5 mr-0 md:mr-6 w-fit">
+            <Button type="button" className="mt-5 mr-0 md:mr-6 w-fit">
               <a
                 href={resume}
                 target="_blank"
@@ -57,16 +57,16 @@ const Home = () => {
                 className="flex items-center"
               >
                 <p>Download Resume</p>
-                <AiOutlineCloudDownload className="w-[30px] h-[30px] pt-1" />
+                <AiOutlineCloudDownload className="w-[30px] h-[30px] pt-1 pl-1" />
               </a>
             </Button>
           </motion.div>
 
           <motion.div variants={buttonVariants.variants}>
-            <Button type="button" className="mt-5 w-fit space-x-3">
-              <Link to="/contact" className="flex items-center">
-                <p>Contact Me</p>
-                <FaTelegramPlane className="w-[30px] h-[30px] pt-1" />
+            <Button type="button" className="mt-5 w-fit px-5">
+              <Link to="/about" className="flex items-center ">
+                <p>About Me</p>
+                <ImArrowRight2 className="w-[30px] h-[30px] pt-1 pl-1" />
               </Link>
             </Button>
           </motion.div>

@@ -2,17 +2,15 @@ import { MotionProps } from "framer-motion";
 
 export const hiVariants: MotionProps = {
   variants: {
-    initial: { y: "-10vw", opacity: 0 },
+    initial: { y: "-5vw", opacity: 0 },
     animate: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut" },
+      transition: { duration: 0.5, ease: "easeInOut" },
     },
     exit: {
-      y: "-10vw",
       opacity: 0,
       transition: {
-        duration: 1,
         ease: "easeOut",
       },
     },
@@ -30,7 +28,7 @@ export const nameVariants: MotionProps = {
     exit: {
       transition: {
         delayChildren: 0.3,
-        staggerChildren: 0.06,
+        staggerChildren: 0.03,
       },
     },
   },
@@ -59,7 +57,7 @@ export const sloganVariants: MotionProps = {
     exit: {
       opacity: 0,
       transition: {
-        delay: 1.5,
+        delay: 0.8,
         duration: 0.6,
         ease: "easeOut",
       },
@@ -77,7 +75,7 @@ export const buttonsVariants: MotionProps = {
     },
     exit: {
       transition: {
-        delayChildren: 2,
+        delayChildren: 1,
         staggerChildren: 0.3,
       },
     },

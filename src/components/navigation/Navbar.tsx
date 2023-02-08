@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import {
   linksVariants,
   logoVariants,
+  menuBurgerVariants,
   navbarVariants,
 } from "../../animation/nav-motion";
 import { logo } from "../../assets";
@@ -67,12 +68,15 @@ const Navbar: React.FC<{ visible: boolean; yOffset: number }> = ({
         </motion.ul>
 
         {/* Mobile Navbar */}
-        <div
+        <motion.div
           className="md:hidden text-4xl absolute top-5 right-7 cursor-pointer z-20"
           onClick={() => cycleOpen()}
+          variants={menuBurgerVariants.variants}
+          initial="initial"
+          animate="animate"
         >
           {!open ? <CgMenuRight /> : <CgClose />}
-        </div>
+        </motion.div>
         <AnimatePresence mode="wait">
           {open && (
             <motion.ul
