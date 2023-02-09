@@ -4,10 +4,12 @@ import { useAnimationControls, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { titleVariants } from "../../../animation/about-motion";
+import useWindowSize from "../../../hooks/useWindowSize";
 
 const Education = () => {
   const controls = useAnimationControls();
   const [ref, inView] = useInView();
+  const { desktop, mobile } = useWindowSize();
 
   useEffect(() => {
     if (inView) {
@@ -16,7 +18,7 @@ const Education = () => {
   }, [controls, inView]);
 
   return (
-    <section className="w-full mt-48 ">
+    <section className={`w-full ${desktop && "mt-48"} ${mobile && "mt-28"}`}>
       <div className="flex justify-center">
         <motion.h1
           className="font-extrabold text-4xl mb-10 text-aqua font-roboto relative w-fit

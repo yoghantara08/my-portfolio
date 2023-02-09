@@ -10,11 +10,13 @@ import {
   fadedInVariants,
   titleVariants,
 } from "../../../animation/about-motion";
+import useWindowSize from "../../../hooks/useWindowSize";
 
 const Hobbies = () => {
   const [selectedTab, setSelectedTab] = useState(HobbiesArr[0]);
   const controls = useAnimationControls();
   const [ref, inView] = useInView();
+  const { desktop, mobile } = useWindowSize();
 
   useEffect(() => {
     if (inView) {
@@ -23,7 +25,7 @@ const Hobbies = () => {
   }, [controls, inView]);
 
   return (
-    <section className="mt-48 w-full">
+    <section className={`w-full ${desktop && "mt-48"} ${mobile && "mt-28"}`}>
       <div className="flex justify-center">
         <motion.h1
           className="font-extrabold text-2xl sm:text-4xl mb-3 text-aqua font-roboto relative w-fit
