@@ -1,6 +1,8 @@
 import { IProject } from "../../content";
 import TagButton from "../button/TagButton";
 import { FaGithub, FaEye } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { projectVariants } from "../../animation/projects-motion";
 
 interface Props {
   project: IProject;
@@ -10,7 +12,10 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
   const { image, tags, description, title, demo, github } = project;
 
   return (
-    <li className="rounded bg-slate-900 shadow-shadowEven w-full inline-block mb-5 group cursor-default">
+    <motion.li
+      className="rounded bg-slate-900 shadow-shadowEven w-full inline-block mb-5 group cursor-default"
+      variants={projectVariants.variants}
+    >
       <div className="relative w-full ">
         <img src={image} alt={title} className="rounded-t" />
         <div
@@ -41,7 +46,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
           ))}
         </div>
       </div>
-    </li>
+    </motion.li>
   );
 };
 
