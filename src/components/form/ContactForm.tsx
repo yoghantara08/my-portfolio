@@ -1,7 +1,9 @@
 import axios from "axios";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaTelegramPlane } from "react-icons/fa";
+import { rightSlideVariants } from "../../animation/about-motion";
 import Button from "../button/Button";
 import Input from "./Input";
 import TextArea from "./TextArea";
@@ -35,9 +37,10 @@ const ContactForm = () => {
   const disabled = errors.name || errors.email || errors.message;
 
   return (
-    <form
+    <motion.form
       onSubmit={handleSubmit(onSubmit)}
       className="flex flex-col space-y-7 text-lg"
+      variants={rightSlideVariants.variants}
     >
       <Input
         type="text"
@@ -82,7 +85,7 @@ const ContactForm = () => {
           <p>Loading...</p>
         )}
       </div>
-    </form>
+    </motion.form>
   );
 };
 

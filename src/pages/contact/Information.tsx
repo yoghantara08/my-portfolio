@@ -1,9 +1,14 @@
 import { MdEmail, MdLocationPin } from "react-icons/md";
 import { BsTelephoneFill } from "react-icons/bs";
+import { motion } from "framer-motion";
+import { leftSlideVariants } from "../../animation/about-motion";
 
 const Information = () => {
   return (
-    <div className="flex flex-col space-y-3 text-lg mt-3 md:mt-6">
+    <motion.div
+      className="flex flex-col space-y-3 text-lg mt-3 md:mt-6"
+      variants={leftSlideVariants.variants}
+    >
       <h3 className="text-2xl font-bold text-white">Let's Get in Touch!</h3>
       <p className="">I'd love to hear your message</p>
       <div className="flex items-center">
@@ -24,7 +29,7 @@ const Information = () => {
         </div>
         <p>+6281246480844</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
