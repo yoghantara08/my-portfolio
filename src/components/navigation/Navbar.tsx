@@ -42,9 +42,9 @@ const Navbar: React.FC<{ visible: boolean; yOffset: number }> = ({
       </AnimatePresence>
       <nav
         className={`${visible ? "top-0" : "-top-24"}
-        ${yOffset > 100 ? "" : ""}
+        ${yOffset > 100 ? " backdrop-blur py-4" : "py-6"}
         fixed left-0 right-0 flex justify-between px-10 
-        lg:px-20 py-6 font-roboto duration-500 z-20`}
+        lg:px-20  font-roboto duration-500 z-20`}
       >
         <Link to="/">
           <motion.img
