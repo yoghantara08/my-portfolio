@@ -49,26 +49,29 @@ const Home = () => {
           variants={buttonsVariants.variants}
         >
           <motion.div variants={buttonVariants.variants}>
-            <Button type="button" className="mt-5 mr-0 md:mr-6 w-fit">
-              <a
-                href={resume}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center"
+            <a
+              href={resume}
+              target="_blank"
+              rel="noreferrer"
+              className="flex w-fit"
+            >
+              <Button
+                type="button"
+                className="flex items-center mt-5 mr-0 md:mr-6"
               >
                 <p>Download Resume</p>
                 <AiOutlineCloudDownload className="w-[30px] h-[30px] pt-1 pl-1" />
-              </a>
-            </Button>
+              </Button>
+            </a>
           </motion.div>
 
           <motion.div variants={buttonVariants.variants}>
-            <Button type="button" className="mt-5 w-fit px-5">
-              <Link to="/about" className="flex items-center ">
+            <Link to="/about" className="flex w-fit">
+              <Button type="button" className="flex items-center mt-5 px-5">
                 <p>About Me</p>
                 <ImArrowRight2 className="w-[30px] h-[30px] pt-1 pl-1" />
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
       </main>
