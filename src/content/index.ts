@@ -173,18 +173,21 @@ export const certificate = [
 ];
 
 export const skills = [
-  { logo: "HTML" },
-  { logo: "CSS" },
-  { logo: "JavaScript" },
-  { logo: "TypeScript" },
-  { logo: "React" },
-  { logo: "Tailwindcss" },
-  { logo: "Bootstrap" },
-  { logo: "Java" },
-  { logo: "Spring" },
-  { logo: "MySQL" },
-  { logo: "Git" },
-  { logo: "Firebase" },
+  { logo: "HTML", link: "https://en.wikipedia.org/wiki/HTML" },
+  { logo: "CSS", link: "https://en.wikipedia.org/wiki/CSS" },
+  { logo: "JavaScript", link: "https://en.wikipedia.org/wiki/JavaScript" },
+  { logo: "TypeScript", link: "https://www.typescriptlang.org/" },
+  { logo: "React", link: "https://reactjs.org/" },
+  { logo: "Tailwindcss", link: "https://tailwindcss.com/" },
+  { logo: "Bootstrap", link: "https://getbootstrap.com/" },
+  { logo: "NodeJs", link: "https://nodejs.org/" },
+  { logo: "MongoDB", link: "https://www.mongodb.com/" },
+  { logo: "Express", link: "https://expressjs.com/" },
+  { logo: "Java", link: "https://www.java.com/en/" },
+  { logo: "Spring", link: "https://spring.io/" },
+  { logo: "MySQL", link: "https://www.mysql.com/" },
+  { logo: "Git", link: "https://git-scm.com/" },
+  { logo: "Firebase", link: "https://firebase.google.com/" },
 ];
 
 export const projects: IProject[] = [
