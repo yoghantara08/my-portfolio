@@ -71,7 +71,7 @@ const ContactForm = () => {
             disabled={disabled ? true : false}
             className={`w-fit py-2 px-5 flex items-center space-x-2 ${
               errors
-                ? "disabled:opacity-70 disabled:cursor-not-allowed disabled:border-red disabled:text-red disabled:hover:bg-black"
+                ? "disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:bg-black"
                 : ""
             }`}
           >
