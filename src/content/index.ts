@@ -178,6 +178,7 @@ export const skills = [
   { logo: "JavaScript", link: "https://en.wikipedia.org/wiki/JavaScript" },
   { logo: "TypeScript", link: "https://www.typescriptlang.org/" },
   { logo: "React", link: "https://reactjs.org/" },
+  { logo: "NextJs", link: "https://nextjs.org/" },
   { logo: "Tailwindcss", link: "https://tailwindcss.com/" },
   { logo: "Bootstrap", link: "https://getbootstrap.com/" },
   { logo: "NodeJs", link: "https://nodejs.org/" },

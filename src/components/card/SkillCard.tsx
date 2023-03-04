@@ -10,6 +10,7 @@ import Java from "../logo/Java";
 import JavaScript from "../logo/JavaScript";
 import MongoDb from "../logo/MongoDb";
 import MySQL from "../logo/MySQL";
+import NextJs from "../logo/NextJs";
 import NodeJs from "../logo/NodeJs";
 import ReactJs from "../logo/ReactJs";
 import Spring from "../logo/Spring";
@@ -69,6 +70,9 @@ const SkillCard: React.FC<Props> = ({ logo, link }) => {
       break;
     case "Express":
       skillLogo = <Express />;
+      break;
+    case "NextJs":
+      skillLogo = <NextJs />;
       break;
   }
 
